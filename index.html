@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Página de Dragon Ball</title>
+    <link rel="icon" href="fav.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="creator">
+        <img src="akira.webp" alt="Foto del creador">
+        <p>Akira Toriyama - Creador de Dragon Ball<br>1955-2024</p>
+    </div>
+
+    <header>
+        <img src="titulo.png" alt="Título de la página">
+    </header>
+
+    <nav>
+        <a href="#personajes" onclick="showSection('personajes')">Personajes</a>
+        <a href="#serie" onclick="showSection('serie')">Serie</a>
+        <a href="#manga" onclick="showSection('manga')">Manga</a>
+        <a href="#peliculas" onclick="showSection('peliculas')">Películas</a>
+        <a href="#videojuegos" onclick="showSection('videojuegos')">Videojuegos</a>
+    </nav>
+
+
+    <div class="container">
+        <section id="personajes" class="section api-section">
+            <input type="text" id="searchBarPersonajes" placeholder="Buscar personaje...">
+            <h2>Personajes de Dragon Ball</h2>
+            <div class="characters-grid" id="charactersContainer"></div>
+        </section>
+        <section id="serie" class="section serie-section hidden">
+            <input type="text" id="searchBarSerie" placeholder="Buscar serie...">
+            <h2>Serie de Dragon Ball</h2>
+            <ul id="seriesList">
+                <li>
+                    <img src="img/clasico.webp" alt="Dragon Ball Serie">
+                    <h3>Dragon Ball</h3>
+                    <p><strong>Fecha de inicio:</strong> 26 de febrero de 1986</p>
+                    <p><strong>Fecha de finalización:</strong> 12 de abril de 1989</p>
+                    <p><strong>Numero de capitulos:</strong>153 capitulos</p>
+                </li>
+                <li>
+                    <img src="img/z.webp" alt="Dragon Ball Serie">
+                    <h3>Dragon Ball Z</h3>
+                    <p><strong>Fecha de inicio:</strong> 26 de abril de 1989</p>
+                    <p><strong>Fecha de finalización:</strong>31 de enero de 1996</p>
+                    <p><strong>Numero de capitulos:</strong>291 capitulos</p>
+                
+                </li>
+                <li>
+                    <img src="img/gt.jpe" alt="Dragon Ball Serie">
+                    <h3>Dragon Ball GT</h3>
+                    <p><strong>Fecha de inicio:</strong>7 de febrero de 1996</p>
+                    <p><strong>Fecha de finalización:</strong>19 de noviembre de 1997</p>
+                    <p><strong>Numero de capitulos:</strong>64 capitulos</p>
+                </li>
+                <li>
+                    <img src="img/af.jpg" alt="Dragon Ball Serie">
+                    <h3>Dragon Ball AF</h3>
+                    <p><strong>Fecha de inicio:</strong>Año 1999</p>
+                    <p><strong>Fecha de finalización:</strong> ∞ </p>
+                    <p><strong>Numero de capitulos:</strong> ∞ </p>
+                </li>
+                <li>
+                    <img src="img/kai.jpg" alt="Dragon Ball Serie">
+                    <h3>Dragon Ball Kai </h3>
+                    <p><strong>Fecha de inicio:</strong>5 de abril de 2009</p>
+                    <p><strong>Fecha de finalización:</strong> 27 de marzo de 2011 </p>
+                    <p><strong>Numero de capitulos:</strong> 158 capitulos </p>
+                </li>
+                <li>
+                    <img src="img/zkai.webp" alt="Dragon Ball Serie">
+                    <h3>Dragon Ball Z Kai </h3>
+                    <p><strong>Fecha de inicio:</strong>5 de abril de 2009</p>
+                    <p><strong>Fecha de finalización:</strong> 27 de marzo de 2011 </p>
+                    <p><strong>Numero de capitulos:</strong> 166 capitulos </p>
+                </li>
+                <li>
+                    <img src="img/super.jpg" alt="Dragon Ball Serie">
+                    <h3>Dragon Ball Super </h3>
+                    <p><strong>Fecha de inicio:</strong>5 de julio de 2015</p>
+                    <p><strong>Fecha de finalización:</strong> 25 de marzo de 2018 </p>
+                    <p><strong>Numero de capitulos:</strong> 131 capitulos </p>
+                </li>
+                <li>
+                    <img src="img/heroes.webp" alt="Dragon Ball Serie">
+                    <h3>Dragon Ball Heroes </h3>
+                    <p><strong>Fecha de inicio:</strong>1 de julio de 2018</p>
+                    <p><strong>Fecha de finalización:</strong> En Emisió</p>
+                    <p><strong>Numero de capitulos:</strong> 54 capitulos </p>
+                </li>
+            </ul>
+        </section>
+        <section id="manga" class="section manga-section hidden">
+            <input type="text" id="searchBarManga" placeholder="Buscar manga...">
+            <h2>Mangas de Dragon Ball</h2>
+            <ul id="mangaList">
+                <li>
+                    <img src="img/mangaclasico.png" alt="Dragon Ball Manga">
+                    <h3>Dragon Ball</h3>
+                    <p><strong>Fecha de inicio:</strong> 3 de diciembre de 1984</p>
+                    <p><strong>Fecha de finalización:</strong> 5 de junio de 1995</p>
+                    <p><strong>Número de capítulos:</strong> 519 capítulos</p>
+                    <p><strong>Número de tomos:</strong> 42 tomos</p>
+                    <p><strong>Creador y Dibujante:</strong> Akira Toriyama</p>
+                </li>
+                <li>
+                    <img src="img/dragonsuper.jpg" alt="Dragon Ball Super Manga">
+                    <h3>Dragon Ball Super</h3>
+                    <p><strong>Fecha de inicio:</strong> 20 de junio de 2015</p>
+                    <p><strong>Fecha de finalización:</strong> En curso</p>
+                    <p><strong>Número de capítulos:</strong> Actualmente en 103 capítulos</p>
+                    <p><strong>Número de tomos:</strong> Hasta el momento, 23 tomos recopilatorios</p>
+                    <p><strong>Creador:</strong> Akira Toriyama</p>
+                    <p><strong>Dibujante:</strong> Toyotaro</p>
+                </li>
+                <li>
+                    <img src="img/dragaf.webp" alt="Dragon Ball Super Manga">
+                    <h3>Dragon Ball AF </h3>
+                    <p><strong>Fecha de inicio:</strong> Años 1999</p>
+                    <p><strong>Fecha de finalización:</strong> En curso</p>
+                    <p><strong>Número de capítulos:</strong>∞</p>
+                    <p><strong>Número de tomos:</strong> ∞ tomos recopilatorios</p>
+                    <p><strong>Creador:</strong> General Tablos</p>
+                    <p><strong>Dibujante:</strong> Toyotaro</p>
+                </li>
+                <li>
+                    <img src="img/kakumai.jpg" alt="Dragon Ball Super Manga">
+                    <h3>Dragon Ball Kakumai </h3>
+                    <p><strong>Fecha de inicio:</strong> Año 2018</p>
+                    <p><strong>Fecha de finalización:</strong> En curso</p>
+                    <p><strong>Número de capítulos:</strong> 15 capitulos</p>
+                    <p><strong>Número de tomos:</strong> En curso </p>
+                    <p><strong>Creador y Dibujante:</strong> @Darkows, @Poissonlabo y @Reenko</p>
+                </li>
+                <li>
+                    <img src="img/multiverse.jpg" alt="Dragon Ball Super Manga">
+                    <h3>Dragon Ball Multiverse </h3>
+                    <p><strong>Fecha de inicio:</strong> Año 2008 </p>
+                    <p><strong>Fecha de finalización:</strong> En curso</p>
+                    <p><strong>Número de capítulos:</strong> 99 capitulos y en curso</p>
+                    <p><strong>Número de tomos:</strong> En curso </p>
+                    <p><strong>Creador:</strong>Salagir y Gogeta Jr</p>
+                </li>
+                </li>
+                <li>
+                <img src="img/dbxsai.jpg" alt="Dragon Ball Super Manga">
+                <h3>Dragon Ball X Saitama </h3>
+                <p><strong>Fecha de inicio:</strong> Año 2015 </p>
+                <p><strong>Fecha de finalización:</strong> Finalizado </p>
+                <p><strong>Número de capítulos:</strong> 3 capitulos</p>
+                <p><strong>Creador y Dibujante:</strong>Dragongarow Lee</p>
+                </li>
+                <li>
+                <img src="img/yamcharen.webp" alt="Dragon Ball Super Manga">
+                <h3>DRAGON BALL: YAMCHA GAIDEN </h3>
+                <p><strong>Fecha de inicio:</strong> Año 2016 </p>
+                <p><strong>Fecha de finalización:</strong> Año 2017 </p>
+                <p><strong>Número de capítulos:</strong> 3 capitulos</p>
+                <p><strong>Creador y Dibujante:</strong>Dragongarow Lee</p>
+                </li>
+            </ul>
+        </section>
+        <section id="peliculas" class="section peliculas-section hidden">
+            <input type="text" id="searchBarPeliculas" placeholder="Buscar película...">
+            <h2>Películas de Dragon Ball</h2>
+            <ul id="peliculasList">
+                <li>
+                    <img src="img/peli1.webp" alt="Dragon Ball Pelicula">
+                    <h3> Dragon Ball: La leyenda de Shen Long </h3>
+                    <p><strong>Fecha de lanzamiento:</strong> 20 de diciembre de 1986</p>
+                    <p><strong>Duración:</strong> 50 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli2.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball: La princesa durmiente en el castillo del espíritu maligno</h3>
+                    <p><strong>Fecha de lanzamiento:</strong> 18 de julio de 1987</p>
+                    <p><strong>Duración:</strong> 45 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli3.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball: Una gran aventura mística</h3>
+                    <p><strong>Fecha de lanzamiento:</strong> 9 de junio de 1988</p>
+                    <p><strong>Duración:</strong> 48 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli4.jpg" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball: El camino hacia el más fuerte</h3>
+                    <p><strong>Fecha de lanzamiento:</strong> 4 de marzo de 1996</p>
+                    <p><strong>Duración:</strong> 1 Hora 20 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli5.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z: ¡Devuélvanme a mi Gohan!</h3>
+                    <p><strong>Fecha de lanzamiento:</strong> 15 de julio de 1989</p>
+                    <p><strong>Duración:</strong> 45 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli6.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z: El hombre más fuerte de este mundo</h3>
+                    <p><strong>Fecha de lanzamiento:</strong> 10 de marzo de 1990</p>
+                    <p><strong>Duración:</strong> 1 Hora 1 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli7.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z: La batalla más grande del mundo está por comenzar </h3>
+                    <p><strong>Fecha de lanzamiento:</strong> 7 de julio de 1990</p>
+                    <p><strong>Duración:</strong> 1 Hora 5 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli8.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z: Goku es un Súper Saiyajin </h3>
+                    <p><strong>Fecha de lanzamiento:</strong>9 de marzo de 1991</p>
+                    <p><strong>Duración:</strong> 1 Hora 2 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli9.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z: Los rivales más poderosos </h3>
+                    <p><strong>Fecha de lanzamiento:</strong>20 de julio de 1991</p>
+                    <p><strong>Duración:</strong> 1 Hora</p>
+                </li>
+                <li>
+                    <img src="img/peli10.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z: Los Guerreros más Poderosos </h3>
+                    <p><strong>Fecha de lanzamiento:</strong>7 de marzo de 1992</p>
+                    <p><strong>Duración:</strong> 1 Hora 2 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli11.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z: La batalla de los tres Saiyajin </h3>
+                    <p><strong>Fecha de lanzamiento:</strong>11 de julio de 1992</p>
+                    <p><strong>Duración:</strong> 46 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli12.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z: El Poder Invencible </h3>
+                    <p><strong>Fecha de lanzamiento:</strong>6 de marzo de 1993</p>
+                    <p><strong>Duración:</strong> 1 Hora 12 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli13.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z: La galaxia corre peligro </h3>
+                    <p><strong>Fecha de lanzamiento:</strong>7 de octubre de 1993</p>
+                    <p><strong>Duración:</strong> 1 Hora 22 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli14.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z: El Regreso del Guerrero Legendario </h3>
+                    <p><strong>Fecha de lanzamiento:</strong>12 de marzo de 1994</p>
+                    <p><strong>Duración:</strong> 48 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli15.jpg" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z:El combate final </h3>
+                    <p><strong>Fecha de lanzamiento:</strong>9 de julio de 1994</p>
+                    <p><strong>Duración:</strong> 50 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli16.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z:La fusión de Goku y Vegeta	 </h3>
+                    <p><strong>Fecha de lanzamiento:</strong>4 de marzo de 1995</p>
+                    <p><strong>Duración:</strong> 50 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli17.jpg" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z:El Ataque del Dragón	</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>15 de julio de 1995</p>
+                    <p><strong>Duración:</strong> 1 Hora 10 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli18.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z:La batalla de los dioses	</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>30 de marzo de 2013</p>
+                    <p><strong>Duración:</strong> 1 Hora 45 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli19.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Z:La resurrección de Freezer</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>18 de abril de 2015</p>
+                    <p><strong>Duración:</strong> 1 Hora 33 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli20.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Super: Broly</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>14 de diciembre de 2018</p>
+                    <p><strong>Duración:</strong> 1 Hora 40 minutos</p>
+                </li>
+                <li>
+                    <img src="img/peli21.webp" alt="Dragon Ball Pelicula">
+                    <h3>Dragon Ball Super: Super Hero </h3>
+                    <p><strong>Fecha de lanzamiento:</strong>11 de junio del 2022 </p>
+                    <p><strong>Duración:</strong> 1 Hora 40 minutos</p>
+                </li>
+            </ul>
+        </section>
+        <section id="videojuegos" class="section videojuegos-section hidden">
+            <input type="text" id="searchBarVideojuegos" placeholder="Buscar videojuego...">
+            <h2>Videojuegos de Dragon Ball</h2>
+            <ul id="videojuegosList">
+                <li>
+                    <img src="img/videojuego0.jpg" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball: Sparking! Zero (Budokai Tenkaichi 4)</h3>
+                    <p><strong>Fecha de lanzamiento:</strong> 11 de octubre de 2024</p>
+                    <p><strong>Plataformas:</strong> PlayStation 5, Xbox Series X y Series S, Microsoft Windows</p>
+                </li>
+                <li>
+                    <img src="img/videojuego1.jpg" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z: Kakarot</h3>
+                    <p><strong>Fecha de lanzamiento:</strong> 17 de enero de 2020</p>
+                    <p><strong>Plataformas:</strong> PS4, Xbox One, PC</p>
+                </li>
+                <li>
+                    <img src="img/videojuego2.jpg" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball FighterZ</h3>
+                    <p><strong>Fecha de lanzamiento:</strong> 26 de enero de 2018</p>
+                    <p><strong>Plataformas:</strong> PS4, Xbox One, PC, Switch</p>
+                </li>
+                <li>
+                    <img src="img/videojuego3.jpg" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Xenoverse 2</h3>
+                    <p><strong>Fecha de lanzamiento:</strong> 8 de octubre de 2016 </p>
+                    <p><strong>Plataformas:</strong> PlayStation 5, PlayStation 4, Nintendo Switch, Xbox One, Xbox Series X y Series S, Microsoft Windows</p>
+                </li>
+                <li>
+                    <img src="img/videojuego4.avif" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Xenoverse 2</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>14 de octubre de 2022</p>
+                    <p><strong>Plataformas:</strong>  Nintendo Switch, PlayStation 5, PlayStation 4, Xbox One, Microsoft Windows, Xbox Series X y Series S</p>
+                </li>
+                <li>
+                    <img src="img/videojuego5.png" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z: Sparking (Budokai Tenkaichi)</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>6 de octubre de 2005</p>
+                    <p><strong>Plataformas:</strong> PlayStation 2</p>
+                </li>
+                <li>
+                    <img src="img/videojuego6.png" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z: Sparking NEO (Budokai Tenkaichi 2)</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>5 de octubre de 2006</p>
+                    <p><strong>Plataformas:</strong>PlayStation 2, Wii </p>
+                </li>
+                <li>
+                    <img src="img/videojuego7.png" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z: Sparking Meteor (Budokai Tenkaichi 3)</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>6 de octubre de 2007</p>
+                    <p><strong>Plataformas:</strong>PlayStation 2 </p>
+                </li>
+                <li>
+                    <img src="img/videojuego8.webp" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z: Budokai</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>2 de noviembre de 2002</p>
+                    <p><strong>Plataformas:</strong>Nintendo GameCube, PlayStation 2, PlayStation 3, PlayStation Portable, Xbox 360</p>
+                </li>
+                <li>
+                    <img src="img/videojuego9.webp" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z: Budokai 2</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>14 de noviembre de 2003</p>
+                    <p><strong>Plataformas:</strong> PlayStation 2, Nintendo GameCube</p>
+                </li>
+                <li>
+                    <img src="img/videojuego10.webp" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z: Budokai 3</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>16 de noviembre de 2004</p>
+                    <p><strong>Plataformas:</strong> PlayStation 2</p>
+                </li>
+                <li>
+                    <img src="img/videojuego11.png" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball: Raging Blast</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>10 de noviembre de 2009</p>
+                    <p><strong>Plataformas:</strong> PlayStation 3, Xbox 360</p>
+                </li>
+                <li>
+                    <img src="img/videojuego12.webp" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball: Raging Blast 2</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>2 de noviembre de 2010</p>
+                    <p><strong>Plataformas:</strong> PlayStation 3, Xbox 360</p>
+                </li>
+                <li>
+                    <img src="img/videojuego14.jpg" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z: Dokkan Battle</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>30 de enero de 2015</p>
+                    <p><strong>Plataformas:</strong>Android, iOS, iPadOS</p>
+                </li>
+                <li>
+                    <img src="img/videojuego13.webp" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Legends</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>17 de mayo de 2018</p>
+                    <p><strong>Plataformas:</strong> Android, iOS, iPadOS</p>
+                </li>
+                <li>
+                    <img src="img/videojuego15.jpeg" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Heroes</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>11 de noviembre de 2010</p>
+                    <p><strong>Plataformas:</strong> Nintendo Switch, Nintendo 3DS, Microsoft Windows, Arcade</p>
+                </li>
+                <li>
+                    <img src="img/videojuego16.jpg" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z Shin Budokai</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>7 de marzo de 2006</p>
+                    <p><strong>Plataformas:</strong> PlayStation Portable</p>
+                </li>
+                <li>
+                    <img src="img/videojuego17.jpg" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z Shin Budokai 2</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>20 de marzo de 2007</p>
+                    <p><strong>Plataformas:</strong> Sony PSP, PlayStation Portable</p>
+                </li>
+                <li>
+                    <img src="img/videojuego18.webp" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball: Advanced Adventure</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>18 de noviembre de 2004</p>
+                    <p><strong>Plataformas:</strong> Game Boy Advance</p>
+                </li>
+                <li>
+                    <img src="img/videojuego20.webp" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z: The Legacy of Goku</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>14 de mayo de 2002</p>
+                    <p><strong>Plataformas:</strong> Game Boy Advance</p>
+                </li>
+                <li>
+                    <img src="img/videojuego21.webp" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z: The Legacy of Goku 2</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>17 de junio de 2003</p>
+                    <p><strong>Plataformas:</strong> Game Boy Advance</p>
+                </li>
+                <li>
+                    <img src="img/videojuego22.webp" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z: Buu's Fury</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>14 de septiembre de 2004</p>
+                    <p><strong>Plataformas:</strong> Game Boy Advance</p>
+                </li>
+                <li>
+                    <img src="img/videojuego23.webp" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball Z: Sagas</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>22 de marzo de 2005</p>
+                    <p><strong>Plataformas:</strong> PlayStation 2, Nintendo GameCube, Xbox</p>
+                </li>
+                <li>
+                    <img src="img/videojuego24.webp" alt="Dragon Ball Videojuego">
+                    <h3>Dragon Ball: Fusions</h3>
+                    <p><strong>Fecha de lanzamiento:</strong>4 de agosto de 2016</p>
+                    <p><strong>Plataformas:</strong>Nintendo 3DS</p>
+                </li>
+
+            </ul>
+        </section>
+    </div>
+
+    <button class="scroll-to-top" onclick="scrollToTop()">⬆️</button>
+
+    <footer class="footer">
+        <p>&copy; 2024 Mi Página de Dragon Ball. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
